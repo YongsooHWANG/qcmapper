@@ -34,7 +34,7 @@ For the sample demonstration codes for Steane code and Golay code, please see [D
 - Yongsoo Hwang (ETRI, Quantum Technology Research Department), yhwang@etri.re.kr
 
 ## Reference
-```
+-
 
 ## License
 This project is licensed under the [BSD-3-Clause](/docs/LICENSE.md)

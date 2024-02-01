@@ -5,8 +5,6 @@
 - Language :  Python3
 - OS:  Ubuntu 20.04 
 
-Note: It does not work well on Mac OS now, but will be fixed soon.
-
 ## Prerequisites
 To run the project successfully, you need to install the following packages included in "requirements.txt" after installation.
 - *simplejson*, *pandas*, *networkx*, *progress*, *qubitmapping*
@@ -18,7 +16,7 @@ Note that the packages *qubitmapping* is developed by Y.Hwang for this project.
 
 ## Installation
 We encourage installing this project by cloning the source code from GitHub server.
-But, we hope that this project is installed via pip.
+But, we are working now that this project can be installed via pip.
 ```
 bash
 git clone https://github.com/YongsooHWANG/qcmapper.git
@@ -39,7 +37,4 @@ The test code and examples of algorithms and quantum chips are included in the d
 ## License
 This project is licensed under the [BSD-3-Clause](/docs/LICENSE.md)
 
-## Acknowledgement
-
-This work was partly supported by Institute for Information & communications Technology Promotion (IITP) grant funded by the Korea government (MSIT) (No. 2019-0-00003, Research and Development of Core Technologies for Programming, Running, Implementing and Validating of Fault-Tolerant Quantum Computing System.
 

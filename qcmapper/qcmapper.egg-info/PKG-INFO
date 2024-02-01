@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: qcmapper
+Version: 0.0.9
+Summary: quantum circuit mapper
+Author: Yongsoo Hwang
+Requires-Python: >=3
+Requires-Dist: simplejson
+Requires-Dist: networkx
+Requires-Dist: pandas
+Requires-Dist: progress

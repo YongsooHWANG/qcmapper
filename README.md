@@ -28,6 +28,7 @@ git clone https://github.com/YongsooHWANG/qcmapper.git
 
 The detailed usage and the options for the execution will be provided soon.
 For the sample demonstration, please see [Demo.md](docs/Demo.md).
+The test code and examples of algorithms and quantum chips are included in the directory **test**.
 
 ## Authors
 - Yongsoo Hwang (ETRI, Quantum Technology Research Department), yhwang@etri.re.kr

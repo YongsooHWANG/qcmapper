@@ -2,6 +2,9 @@
 
 ## How to execute
 ```
+python qcmapper_test.py
+```
+```
 import os
 import sys
 

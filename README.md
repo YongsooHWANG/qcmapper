@@ -27,8 +27,8 @@ git clone https://github.com/YongsooHWANG/qcmapper.git
 - The detailed usage and the options for the execution will be provided soon.
 - For the sample demonstration, please see [Demo.md](docs/Demo.md).
 - The test code and examples of algorithms and quantum chips are included in the directory **test**.
-- This circuit mapper works well with the openqasm formatted quantum algorithm. Please see an example code[Bernstein-Vazirani_5q.qasm] (test/examples/algorithms/Bernstein-Vazirani_5q.qasm).
-- The quantum chip information file should be provided as a json format. Please see an example file [ibmq_16_melbourne.json](test/examples/quantum_chips/ibmq_16_melbourne.json).
+- This circuit mapper works well with the openqasm formatted quantum algorithm. Please see an example code [Bernstein-Vazirani_5q.qasm](test/examples/algorithms/Bernstein-Vazirani_5q.qasm).
+- The quantum chip information file should be provided as a json format. Please see an example file [ibmq_16_melbourne.json](test/examples/quantum_chips/ibmq_16_melbourne.json). The template will be provided soon with a detailed explanation.
 
 ## Authors
 - Yongsoo Hwang (ETRI, Quantum Technology Research Department), yhwang@etri.re.kr

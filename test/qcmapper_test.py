@@ -18,7 +18,7 @@ if __name__ == "__main__":
                       "iteration": 10, "cost": "lap", "optimal_criterion": "number_gates",
                       "initial_mapping_option": "random", "mapper": "SABRE"}
 
-    path_qchip = os.path.join("examples/quantum_chips", "ibmq_16_melbourne-2021-6-14-17.json")
+    path_qchip = os.path.join("examples/quantum_chips", "ibmq_16_melbourne.json")
 
     for algorithm in list_kisti_algorithms:
     	path_qasm = os.path.join("examples/algorithms", algorithm)

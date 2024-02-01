@@ -26,9 +26,8 @@ git clone https://github.com/YongsooHWANG/qcmapper.git
 
 ## Usage
 
-Please see [How To Use.md](docs/HowToUse.md) to know how to use the package.
-
-For the sample demonstration codes for Steane code and Golay code, please see [Demo.md](docs/Demo.md).
+The detailed usage and the options for the execution will be provided soon.
+For the sample demonstration, please see [Demo.md](docs/Demo.md).
 
 ## Authors
 - Yongsoo Hwang (ETRI, Quantum Technology Research Department), yhwang@etri.re.kr

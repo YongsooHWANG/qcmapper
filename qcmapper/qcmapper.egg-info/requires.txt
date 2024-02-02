@@ -1,4 +1,0 @@
-simplejson
-networkx
-pandas
-progress

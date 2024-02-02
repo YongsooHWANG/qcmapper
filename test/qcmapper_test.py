@@ -49,23 +49,24 @@ if __name__ == "__main__":
     # quantum chip information
 
     # 1. user quantum chip (provided by the file path)
-    # path_qchip = os.path.join("examples/quantum_chips", "ibmq_16_melbourne.json")
+    path_qchip = os.path.join("examples/quantum_chips", "ibmq_16_melbourne.json")
     
     # 2. artificially generated quantum chip by using a delivered package (layout_generator)
     # architecture : {0: all-to-all, 
     #                 2: 2D rectangular, 
     #                 23: 2D rectangular but having triangle face
     #                 3: 3D rectangular }
-    import layout_generator
-    qchip = layout_generator.generate_regular_qchip_architecture("examples/quantum_chips", {"height": 3, "width": 3, "length": 2}, 
-            architecture=23)
-    path_qchip = qchip.get("result_file")
+    # import layout_generator
+    # qchip = layout_generator.generate_regular_qchip_architecture("examples/quantum_chips", {"height": 3, "width": 3, "length": 2}, 
+    #         architecture=23)
+    # path_qchip = qchip.get("result_file")
 
     for algorithm in list_kisti_algorithms:
         path_qasm = os.path.join("examples/algorithms", algorithm)
         ret = qcmapper.map_circuit(path_qasm, path_qchip, option=synthesis_option)
 
         pprint(ret)
-        # chip_size = len(ret.get("qchip").get("qubit_connectivity"))
-        # util.display_qubit_movements(ret.get("system_code"), {"width": 1, "height": chip_size, "lenght": 1},)
+        # function to display qubit movements on the chip
+        chip_size = len(ret.get("qchip").get("qubit_connectivity"))
+        util.display_qubit_movements(ret.get("system_code"), {"width": 1, "height": chip_size, "lenght": 1},)
         

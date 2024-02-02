@@ -13,15 +13,15 @@ from progress.bar import Bar
 from pprint import pprint
 import simplejson as json
 
-import library.parse_qasm as parse_qasm
-import library.DirectedAcyclicGraph as DirectedAcyclicGraph
-import library.DistanceMatrix as DM
+import parse_qasm
+import DirectedAcyclicGraph
+import DistanceMatrix as DM
 import qubitmapping.qubitmapping as qubitmapping
 
-import library.formatconversion as formatconversion
-import library.checkup as checkup
-from library.gatelist import *
-import library.depth_analysis as depth_analysis
+import formatconversion
+import checkup
+from gatelist import *
+import depth_analysis
 
 from icecream import ic
 

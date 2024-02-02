@@ -10,7 +10,7 @@
 
 ## Prerequisites
 To run the project successfully, you need to install the following packages included in "requirements.txt" after installation.
-- *simplejson*, *pandas*, *networkx*, *progress*, *qubitmapping*
+- *simplejson*, *pandas*, *networkx*, *progress*, *icecream*, *qubitmapping*
 
 ```
 pip install -r requirements.txt
@@ -19,7 +19,7 @@ Note that the packages *qubitmapping* is developed by Y.Hwang for this project.
 
 ## Installation
 We encourage installing this project by cloning the source code from GitHub server.
-But, we are working now that this project can be installed via pip.
+But, we are working now that this project can be installed via pip. 
 ```
 bash
 git clone https://github.com/YongsooHWANG/qcmapper.git

@@ -2,7 +2,7 @@
 from pprint import pprint
 import collections
 
-from library.gatelist import *
+from gatelist import *
 
 get_bigger = lambda a, b: a if a>b else b
 

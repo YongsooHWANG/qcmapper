@@ -43,9 +43,9 @@ def call_sabre_mapper(qasm, qchip, **kwargs):
         calibration_aware = False
 
     if calibration_aware:
-        import library.SABRE_calibration_aware_v5 as SABRE
+        import SABRE_calibration_aware_v5 as SABRE
     else:
-        import library.SABRE_v6 as SABRE
+        import SABRE_v6 as SABRE
 
     return SABRE.manage_synthesize(qasm, qchip, 
                         synthesis_option=arguments, 
@@ -56,7 +56,7 @@ def call_dijkstra_mapper(qasm, qchip, **kwargs):
     '''
         function to call dijkstra mapper 
     '''
-    import library.dijkstramapping_v2 as dijkstramapping
+    import dijkstramapping_v2 as dijkstramapping
     arguments = kwargs.get("option")
     
     return dijkstramapping.synthesize_dijkstra_manner(qasm, qchip, 

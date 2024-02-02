@@ -9,14 +9,14 @@ import math
 from pprint import pprint
 import simplejson as json
 
-import library.circuit as circuit
-import library.graph as graph
+import circuit
+import graph
 
 import qubitmapping.qubitmapping as qubitmapping
-import library.parse_qasm as parse_qasm
+import parse_qasm
 
-import library.formatconversion as formatconversion
-from library.gatelist import *
+import formatconversion
+from gatelist import *
 
 from progress.bar import Bar
 

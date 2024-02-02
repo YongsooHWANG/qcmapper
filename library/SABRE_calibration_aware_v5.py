@@ -11,16 +11,16 @@ import math
 import copy
 import multiprocessing
 
-import library.DirectedAcyclicGraph as DirectedAcyclicGraph
-import library.DistanceMatrix as DM
+import DirectedAcyclicGraph
+import DistanceMatrix as DM
 
-import library.parse_qasm as parse_qasm
+import parse_qasm
 import qubitmapping.qubitmapping as qubitmapping
 
-import library.formatconversion as formatconversion
-from library.gatelist import *
+import formatconversion
+from gatelist import *
 
-import library.checkup as checkup
+import checkup
 from progress.bar import Bar
 import time
 

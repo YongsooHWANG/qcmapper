@@ -1,8 +1,7 @@
 
 import re
 from pprint import pprint
-from library.gatelist import *
-
+from gatelist import *
 
 def checkup_system_code(system_code, mapping_table, qchip, **kwargs):
 	"""

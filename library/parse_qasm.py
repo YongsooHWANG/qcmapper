@@ -4,7 +4,7 @@ import re
 import collections
 from math import *
 
-from library.gatelist import *
+from gatelist import *
 
 get_bigger = lambda a, b: a if a > b else b
 get_smaller = lambda a, b: a if a < b else b

@@ -3,7 +3,7 @@ import os
 import sys
 import simplejson as json
 import multiprocessing
-import library.formatconversion as formatconversion
+import formatconversion
 
 
 def map_circuit(path_qasm, path_qchip, **kwargs):

@@ -6,7 +6,7 @@
 # version 0.6
 
 import numpy as np
-import library.shortestpath as shortestpath
+import shortestpath
 
 from pprint import pprint
 

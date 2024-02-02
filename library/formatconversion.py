@@ -6,7 +6,7 @@ import itertools
 from math import *
 
 from pprint import pprint
-from library.gatelist import *
+from gatelist import *
 
 get_bigger = lambda a, b: a if a>b else b
 

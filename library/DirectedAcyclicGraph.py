@@ -5,7 +5,7 @@ import collections
 import itertools
 from pprint import pprint
 
-from library.gatelist import *
+from gatelist import *
 
 def createDAG(list_qasm, **kwargs):
 

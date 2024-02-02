@@ -5,8 +5,8 @@ import itertools
 
 from pprint import pprint
 
-from library.gatelist import *
-import library.depth_analysis as depth_analysis
+from gatelist import *
+import depth_analysis
 
 get_bigger = lambda a, b: a if a > b else b
 

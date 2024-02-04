@@ -4,6 +4,8 @@
 ```
 python qcmapper_test.py
 ```
+### result example
+please see the circuit (../test/examples/jobs/) of "Bernstein-Vazirani_5q.qasm".
 
 ### qcmapper_test.py
 ```

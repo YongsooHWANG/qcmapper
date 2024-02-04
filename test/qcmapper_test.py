@@ -1,5 +1,8 @@
 import os
 import sys
+from pprint import pprint
+from datetime import datetime
+import simplejson as json
 
 # mapper directory
 sys.path.append("../library")
@@ -7,9 +10,7 @@ import qcmapper
 
 # 
 import layout_generator
-from pprint import pprint
 import util
-from icecream import ic
 
 
 if __name__ == "__main__":
@@ -18,7 +19,7 @@ if __name__ == "__main__":
                             # "Bernstein-Vazirani_5q_2.qasm",
                             # "CHSH1.qasm", "CHSH2.qasm", "CHSH3.qasm", 
                             # "CHSH4.qasm",
-                            # "ae_indep_qiskit_5.qasm",
+                            "ae_indep_qiskit_5.qasm",
                             # "dj_indep_qiskit_5.qasm",
                             # "ghz_indep_qiskit_5.qasm",
                             # "graphstate_indep_qiskit_5.qasm",
@@ -27,7 +28,7 @@ if __name__ == "__main__":
                             # "portfolioqaoa_indep_qiskit_5.qasm",
                             # "portfoliovqe_indep_qiskit_5.qasm",
                             # "qaoa_indep_qiskit_5.qasm",
-                            # "qft_indep_qiskit_5.qasm",
+                            "qft_indep_qiskit_5.qasm",
                             # "qftentangled_indep_qiskit_5.qasm",
                             # "qgan_indep_qiskit_5.qasm",
                             # "qpeexact_indep_qiskit_5.qasm",
@@ -58,7 +59,7 @@ if __name__ == "__main__":
     #   7. cost : {"lap", "nnc"} for only SABRE mapper
     
     synthesis_option={"allow_swap": True, 
-                      "calibration" : False,
+                      "calibration" : True,
                       "iteration": 10, 
                       "optimal_criterion": "fidelity",
                       "initial_mapping_option": "random", 
@@ -72,14 +73,14 @@ if __name__ == "__main__":
     #   1. gate_angle : True -> ['U(theta, phi, lambda)', 'qubit']
     #                   False -> ['U', 'theta', 'phi', 'lambda', 'qubit']
     
-    instruction_format = {"gate_angle": False}
+    instruction_format = {"gate_angle": True}
 
     ##########################
     # quantum chip information
 
     # 1. user quantum chip (provided by the file path)
-    # path_qchip = os.path.join("examples/quantum_chips", "ibmq_16_melbourne.json")
-    # user_chip = True
+    path_qchip = os.path.join("examples/quantum_chips", "ibmq_16_melbourne.json")
+    user_chip = True
     
     # 2. artificially generated quantum chip by using a delivered package (layout_generator)
     # architecture : {0: all-to-all, 
@@ -87,12 +88,18 @@ if __name__ == "__main__":
     #                 23: 2D rectangular but having triangle face
     #                 3: 3D rectangular }
     
-    import layout_generator
-    chip_dimension = {"height": 3, "width": 3, "length": 1}
-    qchip = layout_generator.generate_regular_qchip_architecture("examples/quantum_chips", chip_dimension, 
-            architecture=2)
-    user_chip = False
-    path_qchip = qchip.get("result_file")
+    # import layout_generator
+    # chip_dimension = {"height": 3, "width": 3, "length": 1}
+    # qchip = layout_generator.generate_regular_qchip_architecture("examples/quantum_chips", chip_dimension, 
+    #         architecture=2)
+    # user_chip = False
+    # path_qchip = qchip.get("result_file")
+
+    dir_jobs = os.path.join("examples", "jobs")
+    if not os.path.exists(dir_jobs):
+        os.makedirs(dir_jobs)
+
+    now = datetime.now()
 
     for algorithm in list_kisti_algorithms:
         print(algorithm)
@@ -101,12 +108,20 @@ if __name__ == "__main__":
                                                           format=instruction_format)
         pprint(ret)
 
+        # writing a circuit into a file
+        algorithm_name = os.path.splitext(algorithm)[0]
+        qchip_name = os.path.splitext(os.path.basename(path_qchip))[0]
+        current_time = "{}-{}-{}".format(now.date(),now.hour,now.minute)
+        task_id = "{}-{}-{}".format(algorithm_name, qchip_name, current_time)
+        
+        dir_task = os.path.join(dir_jobs, task_id)
+        os.makedirs(dir_task)
+        file_circuit = os.path.join(dir_task, "circuit.json")
+        
+        with open(file_circuit, "w") as outfile:
+            json.dump(ret, outfile, sort_keys=True, indent=4, separators=(',', ':'))
+
         # functions to display the qubit movings
         # to see the position of qubit during the circuit
-
-        if user_chip:
-            count_qubits = len(ret.get("qchip").get("qubit_connectivity"))
-            # chip_dimension = {"width": 1, "height": count_qubits, "length": 1}
-
         util.display_qubit_movements(ret.get("system_code"), qchip=ret.get("qchip"))
         

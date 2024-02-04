@@ -3,6 +3,7 @@
 - This project provides two functions: circuit mappings based only on qubit connectivity and the *calibration data* such as gate fidelity and time.
 - For the connectivity resolving circuit mapping, we first implemented the [**SABRE algorithm**](https://dl.acm.org/doi/10.1145/3297858.3304023) and, second, developed a fast circuit mapping based on **dijkstra's shortest path** algorithm.
 - For the *calibration-aware* mapping, we have redesigned and implemented the SABRE and the dijkstra based mapping.
+- We will add some notes about our mapping algorithm and software in [Note](docs/Note.md).
 
 ## Environment
 - Language :  Python3

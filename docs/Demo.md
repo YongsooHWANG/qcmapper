@@ -5,7 +5,7 @@
 python qcmapper_test.py
 ```
 ### result example
-please see the circuit (../test/examples/jobs/) of "Bernstein-Vazirani_5q.qasm".
+please see the [circuit](../test/examples/jobs/Bernstein-Vazirani_5q-ibmq_16_melbourne-2024-02-04-16-52/circuit.json) of "Bernstein-Vazirani_5q.qasm".
 
 ### qcmapper_test.py
 ```

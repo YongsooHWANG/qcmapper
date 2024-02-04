@@ -1,9 +1,11 @@
-# How to use the sample code *qcmapper\_test.py*
+## How to use the sample code *qcmapper\_test.py*
 
-## How to execute
+### How to execute
 ```
 python qcmapper_test.py
 ```
+
+### qcmapper_test.py
 ```
 import os
 import sys

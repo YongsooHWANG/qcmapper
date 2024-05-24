@@ -43,4 +43,8 @@ git clone https://github.com/YongsooHWANG/qcmapper.git
 ## License
 This project is licensed under the [BSD-3-Clause](/docs/LICENSE.md)
 
+## Acknowledgement
+
+This work was partly supported by Institute for Information & communications Technology Promotion (IITP) grant funded by the Korea government (MSIT) (No. 2019-0-00003, Research and Development of Core Technologies for Programming, Running, Implementing and Validating of Fault-Tolerant Quantum Computing System & No.2022-0-00463).
+
 

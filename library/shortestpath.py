@@ -34,10 +34,10 @@ class Vertex:
         return self.id
 
     def get_weight(self, neighbor):
-        try:
-            return self.adjacent[neighbor]["weight"]
-        except:
-            return self.adjacent[neighbor]
+        weight = self.adjacent[neighbor].get("weight")
+        if weight is None:
+            weight = self.adjacent[neighbor]
+        return weight
 
     def set_distance(self, dist):
         self.distance = dist

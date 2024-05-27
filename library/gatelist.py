@@ -68,7 +68,7 @@ list_1q_rotations = [rx, ry, rz, u, u1, u2, u3, phase]
 list_2q_rotations = [rzz, cphase]
 
 list_1q_gates = [pauli_x, pauli_y, pauli_z, pauli_i, h, t, tdag, s, sdag] +\
-				list_1q_rotations + list_measure + list_prepare
+                list_1q_rotations + list_measure + list_prepare
 list_2q_gates = [cnot, cphase, cz, cx, rzz, swap]
 list_barrier = [barrier, barrier_all]
 list_move = [move, move_back]
